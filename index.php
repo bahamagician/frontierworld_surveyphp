@@ -136,7 +136,7 @@
           <label for="medievalWorld">MedievalWorld</label>
         </div>
         <p>Do you have any questions, comments, or concerns regarding your recent stay at Frontier World? Feel free to add them in the space below!</p>
-        <textarea name="Extra-comments" rows="10" cols="150">Enter your comment here! Please keep any negative comments to 125 characters, please!</textarea>
+        <textarea name="Extra_comments" rows="10" cols="150">Enter your comment here! Please keep any negative comments to 125 characters, please!</textarea>
         <div>
           <input type="submit" id="submit" value="Send">
         </div>

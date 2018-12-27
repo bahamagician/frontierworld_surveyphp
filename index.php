@@ -12,8 +12,8 @@
     $stmt_prelim->bindParam(':email', $_POST["email"]);
     $stmt_prelim->bindParam(':phone_number', $_POST["phone_number"]);
 
-    $last_id = $db->lastInsertId();
     $stmt_prelim->execute();
+    $last_id = $db->lastInsertId();
 
     $ratings =
             "INSERT INTO guest_ratings_comments

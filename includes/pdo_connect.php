@@ -8,4 +8,4 @@ $options = [
   //https://gist.github.com/adrian-enspired/385c6830ba2932bc36a2
   // learn more here: https://phpdelusions.net/pdo#errors
 
-$db = new PDO($dsn, 'root', ''); //these credntials are for MAMP
+$db = new PDO($dsn, 'root', '', $options); //these credntials are for MAMP

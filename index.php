@@ -17,13 +17,12 @@
 
     $ratings =
             "INSERT INTO guest_ratings_comments
-            (guest_id, comments, ratings, stay_length)
-            VALUES (:guest_id, :comments, :ratings, :stay_length)";
+            (guest_id, comments, ratings)
+            VALUES (:guest_id, :comments, :ratings)";
     $stmt_ratings = $db->prepare($ratings);
     $stmt_ratings->bindParam(':guest_id', $last_id);
     $stmt_ratings->bindParam(':comments', $_POST["Extra_comments"]);
     $stmt_ratings->bindParam(':ratings', $_POST["rating"]);
-    $stmt_ratings->bindParam(':stay_length', $_POST["days_spent"]);
     $stmt_ratings->execute();
 
 

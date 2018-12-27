@@ -17,10 +17,10 @@
 
     $ratings =
             "INSERT INTO guest_ratings_comments
-            (guest_code_ratings, comments, ratings, stay_length)
-            VALUES (:guest_code_ratings, :comments, :ratings, :stay_length)";
+            (guest_id, comments, ratings, stay_length)
+            VALUES (:guest_id, :comments, :ratings, :stay_length)";
     $stmt_ratings = $db->prepare($ratings);
-    $stmt_ratings->bindParam(':guest_code_ratings', $last_id);
+    $stmt_ratings->bindParam(':guest_id', $last_id);
     $stmt_ratings->bindParam(':comments', $_POST["Extra_comments"]);
     $stmt_ratings->bindParam(':ratings', $_POST["rating"]);
     $stmt_ratings->bindParam(':stay_length', $_POST["days_spent"]);
@@ -31,10 +31,10 @@
     $theme = null;
     $newsletter_insert =
             "INSERT INTO  newsletter_subscriptions
-            (guest_code_news_subs, updates)
-            VALUES (:guest_code_news_subs, :updates)";
+            (guest_id, updates)
+            VALUES (:guest_id, :updates)";
     $newsletter_stmt = $db->prepare($newsletter_insert);
-    $newsletter_stmt -> bindParam(':guest_code_news_subs', $last_id);
+    $newsletter_stmt -> bindParam(':guest_id', $last_id);
     $newsletter_stmt -> bindParam(':updates', $theme);
 
     if(!empty($_POST["newsletters"])) {
